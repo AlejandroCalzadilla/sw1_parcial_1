@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    font-family: Ppfraktionsans, sans-serif;
+    background-image: linear-gradient(to right top,#000000 ,#291E29,#000000,#291E29);
+}
+ h1{
+    color: white;
+    margin-left: 5%;
+    font-size:30px;
+ }
+
+header{
+    display: flex;
+    
+}
+
+h1{
+    font-family:  Ppfraktionsans, sans-serif;
+    margin-top: 15px;
+    width: 70%;
+    color: #ed2637;
+}
+nav{
+
+    display: flex;
+    width: 30%;
+    justify-items: center;
+    justify-content: center;
+
+
+}
+
+ ul{
+    display: flex;
+    margin-top: 15px;
+ }
+li{
+  
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+ footer{
+    margin-top:125px;
+    margin-left:90px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+ }
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+article{
+    width: 40%;
+    margin-left:5%;
+    
+}
+aside{
+    width: 60%;
+    display: flex;
+    
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.ah1 {
+    color: #ed2637;
+    font-family: Ppfraktionsans, sans-seri;
+    font-weight:300;
+    font-size: 55px;
+    line-height: 105%;
+    
+}
+.ah1 span{
+    color:white
+}
+
+.ah2{
+    margin-top:30px;
+    color:grey;
+}
+
+img{
+    width:60%; /* Ancho deseado */
+    height: auto; 
+}
+
+
+ .botones{
+    display: flex;
+ }
+
+.bt{
+   margin-top:25px;
+ 
+   width: 150px;
+   height:50px;
+   border-radius:7px;
+   background-color: rgb(220, 230, 237);
+   font-size: small;
+
+}
+.bt1{
+    padding-top: 15px;
+    padding-left:5%;
+}
+.bt1:hover{
+    background-color: red;
+}
+
+
+
+
+
+
+.bt2{
+ pointer-events: auto;
+  margin-left: 10px;
+  background-color:rgb(19, 30, 41);
+  border: 2px solid;
+  border-color: white;
+  
+}
+
+.bt2:hover  {
+    background-color: rgb(220, 230, 237);
+    
+}
+
+.bt2:hover a  {
+    
+    color: black;
+}
+
+
+.bt-h1{
+    font-size: 14px;
+    color: black;
+    font-family: Ppfraktionsans, sans-seri;
+}
+.bt-h2{
+    display: block;
+    color:white;
+    padding-top: 14px;
+    padding-left:40px;
+    font-family: Ppfraktionsans, sans-seri;
+    width: 100%;
+    height: 100%;
+}

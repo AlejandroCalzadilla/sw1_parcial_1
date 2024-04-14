@@ -1,0 +1,94 @@
+
+
+  <header class="encabezado">
+    <p class="logo">SEQUENCE</p>
+    <nav class="nav">
+        <a class="nav_h" routerLink="/">inicio</a>
+        
+        <a class="nav_h"   (click)="logout()" routerLink="/">cerrar seccion</a>
+         
+        <a class="nav_perfil" routerLink="/">{{iniciales()}}</a>
+        
+    </nav>
+  </header>
+ 
+  
+ 
+  <!-- <button class="btn btn-primary" (click)="obtenerTodos()">ver todos</button> -->
+
+  <section class="experiencia">
+    <div class="co" >
+      <div *ngFor="let proyect of proyectosFF" class="container_padre">      
+        <a class="link_tarjeta" (click)="proyecto(proyect.id)" routerLink="/pizarra"> 
+        <div   class="tarjeta">
+          <div class="imagen">
+            <img src="assets/secuenciap.png" alt="Microsoft 365">
+          </div>
+          <div class="contenido" >
+
+            <h2>{{ proyect.title }}</h2>
+            <p>{{proyect.description}}</p>
+           
+            
+          </div>
+        </div>
+      </a> 
+      </div>
+      
+    </div>
+    
+
+
+
+    <div class="container">
+      <br>
+      <h3 style="color: white;">Proyectos</h3>
+      <br>
+      <br>
+      <table *ngIf="proyectos.length > 0">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Título</th>
+                  <th scope="col">Última actualización</th>
+                  <th style="width: 50px;"></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let proyect of proyectos; let i = index">
+                  
+                  <th >{{ i + 1 }}</th>
+                  <td (click)="proyecto(proyect.id)" routerLink="/pizarra"> {{ proyect.title }}  </td>
+                  <td (click)="proyecto(proyect.id)" routerLink="/pizarra" > {{ proyect.updated | date:'yyyy-MM-dd' }}</td>
+               
+                  <td style="width: 100px;">
+                      <button type="button" class="btna btn-1">editar</button>
+                  </td>
+              </tr>
+              <tr *ngIf="!proyectos.length">
+                  <td colspan="4">No hay proyectos disponibles.</td>
+              </tr>
+          </tbody>
+      </table>
+      <div *ngIf="!proyectos.length">
+          <p>No hay proyectos disponibles.</p>
+      </div>
+  </div>
+  
+    
+
+
+
+
+
+
+
+  </section>
+  
+   
+
+      
+
+
+
+

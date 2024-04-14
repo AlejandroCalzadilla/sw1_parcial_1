@@ -1,0 +1,149 @@
+
+
+  <header>  
+    <nav class="nav">
+      <ul>
+        <li class="user">al</li>
+         <li class="user">al</li>
+         <li class="user">al</li>
+         <li class="user">al</li>
+         <li class="share" style="background-color: gray;">compartir</li>
+         <li class="share" style="background-color:red;" (click)="guardar()">guardar</li>
+        </ul>
+       
+     <div class="perfiles">
+
+     </div>
+    </nav> 
+  
+</header>
+  
+   
+
+  <main>
+    <aside>
+      <div class="contenedor">
+        <div 
+        #movableDiv data-id="1" width="38" height="50"
+        (mousedown)="onMouseDown($event)" 
+        (document:mousemove)="onMouseMove($event)" 
+        class="icon" 
+        style="pointer-events: all;">
+           <img src="assets/lifeline_icon2.png" style="pointer-events: none;" width="70%" height="70%">      
+      </div>
+    
+    
+
+
+
+
+    
+    <div 
+      #movableDiv2  data-id="2"
+      (mousedown)="onMouseDown($event) " (document:mousemove)="onMouseMove($event)"  class="icon"
+      style="pointer-events: all;"
+      >
+      <!-- Contenido del div -->
+      <!-- <i class="fa-regular fa-square"></i> -->
+      
+      <img src="assets/actor_icon.png" style="pointer-events: none;" width="70%" height="70%"> 
+    </div>
+    
+    
+    
+    <div 
+      #movableDiv3  data-id="3" 
+      (mousedown)="onMouseDown($event) "  (document:mousemove)="onMouseMove($event)" 
+      class="icon" 
+      style="pointer-events: all;">
+         <img src="assets/flecha.png" style="pointer-events: none;" width="70%" height="70%">    
+    </div>
+    
+    
+    
+    
+    <div 
+      #movableDiv4  data-id="4"
+      
+      (mousedown)="onMouseDown($event) " (document:mousemove)="onMouseMove($event)"  class="icon"
+      
+      style="pointer-events: all;">
+      <img src="assets/fragment.png" style="pointer-events: none;" width="70%" height="70%">   
+    </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="contenedor"> -->
+
+
+<!-- 
+        <div class="icon" id="draggableElement"     #movableDiv  data-id="1"
+        
+        (mousedown)="onMouseDown($event) " (document:mousemove)="onMouseMove($event)" >
+          <i class="fa-solid fa-user-plus"></i>
+        </div>
+  
+  
+        <div class="icon" id="draggable2"  #movableDiv2  data-id="2"
+        style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; background-color:red; margin-left: 150px;" 
+        (mousedown)="onMouseDown($event) " (document:mousemove)="onMouseMove($event)">
+          
+          <i class="fa-regular fa-square">
+        </i>
+      </div>
+  
+  
+  
+        <div class="icon"  #movableDiv3  data-id="3"
+       
+        (mousedown)="onMouseDown($event) " (document:mousemove)="onMouseMove($event)"
+         ><i class="fa-solid fa-arrow-right"
+            style="color: #FFD43B;"  
+            ></i>
+        </div>
+  
+  
+        <div class="icon" 
+        #canvasElement id="actorCanvas" width="1200" height="800"  (document:mouseup)="onMouseUp($event)" (mousedown)="onCanvasMouseDown($event)"
+        (document:mouseup)="onCanvasMouseUp($event)"
+        (mousemove)="onCanvasMouseMove($event)"
+         
+        
+        ><i class="fa-regular fa-rectangle-list"></i></div>
+        <div class="icon" id="draggableElement2" draggable="true"><i class="fa-regular fa-rectangle-list"></i></div>
+  
+  
+      </div>
+   -->
+  </div>
+    </aside>
+    <article>
+
+      <canvas #canvasElement id="actorCanvas" width="5000" height="3000" style="background-color:#121c27;" (document:mouseup)="onMouseUp($event)" (mousedown)="onCanvasMouseDown($event)"
+      (document:mouseup)="onCanvasMouseUp($event)"
+      (mousemove)="onCanvasMouseMove($event)"></canvas>
+     
+
+<!-- 
+      <canvas #canvasElement id="actorCanvas" width="1200" height="550" style="border: 1px solid #ED3A23;  margin-left:50px; background-color:#121c27;" (document:mouseup)="onMouseUp($event)" (mousedown)="onCanvasMouseDown($event)"
+      (document:mouseup)="onCanvasMouseUp($event)"
+      (mousemove)="onCanvasMouseMove($event)"></canvas>
+     -->
+    
+    
+    
+    
+    </article>
+  </main>
+  <!-- <script type="module"  src="script.ts"></script>
+  <script type="module" src="actor.ts"> </script>
+  <script type="module"  src="lifeline.ts"></script> -->
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+

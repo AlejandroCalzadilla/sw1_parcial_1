@@ -1,0 +1,115 @@
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    color: white;
+    /* background-image: linear-gradient(to right, #f69d3c, #3f87a6); */
+    background-color: rgb(18,28,39);
+}
+
+
+
+
+.ng-valid:not(form).ng-touched{
+    border-left:5px solid #42A948;
+    
+ }
+ /* para los errores se puede moqidificar*/
+ .ng-invalid:not(form).ng-touched{
+     border-left:5px solid #a94442;
+     
+  }
+
+
+
+.err{
+    font-size: small;
+}
+
+.titulo{
+    color: white;
+    font-size: medium;
+ }
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin-top:6%;
+    display:flex;
+
+}
+
+.formulario {
+    padding: 20px;
+    border: 1px solid #ddd;
+    /*border-radius: 10px;*/
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    height: 75%;
+    background-color: rgb(37,47, 57);
+    
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formulario p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.formulario button {
+    padding: 10px 20px;
+    /*background-color: #007bff;*/
+    background-color:rgb(19, 30,41);
+    color: #fff;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+   /* background-color: #0069d9;*/
+   background-color: #0c5ae9;
+}
+
+.formulario .enlace {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.formulario .enlace a {
+    color: #11295a;
+    text-decoration: none;
+}
+
+
+img{
+    width:50%;
+    height:75%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}

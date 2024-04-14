@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+    /* background-image: linear-gradient(to right, #f69d3c, #3f87a6); */
+    background-color: rgb(18,28,39);
+}
+
+
+
+ .titulo{
+    color: white;
+ }
+.container {
+    width: 100%;
+    max-width:700px;
+    margin-top:4%;
+    margin-left:20%;
+   
+}
+
+.formulario {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 50%;
+    background-color: rgb(37,47, 57);
+
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formulario p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /*margin-bottom: 10px;*/
+}
+
+.formulario button {
+    padding: 10px 20px;
+    /*background-color: #007bff;*/
+   background-color:rgb(19, 30,41);
+    color: white;
+    width:250px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left:30px;
+}
+
+
+.formulario .enlace {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.formulario .enlace a {
+    color: #11295a;
+    text-decoration: none;
+}
+
+

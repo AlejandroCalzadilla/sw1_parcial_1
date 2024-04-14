@@ -1,0 +1,44 @@
+<!-- <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="user.name" name="nombre" placeholder="Nombre">
+    <input type="text" [(ngModel)]="user.lastName" name="apellido" placeholder="Apellido">
+    <input type="text" [(ngModel)]="user.userName" name="username" placeholder="Nombre de usuario">
+    <input type="email" [(ngModel)]="user.email" name="email" placeholder="Correo electrónico">
+    <input type="password" [(ngModel)]="user.password" name="contraseña" placeholder="Contraseña">
+    <button type="submit">Crear usuario</button>
+  </form> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ <div class="container"> 
+  <div class="formulario">
+    <h2 class="titulo">Crea tu cuenta</h2>
+    <p>Es solo cuestión de minutos y es gratis.</p>
+   <form #userForm="ngForm" (ngSubmit)="getUserFormData(userForm.value)">
+    <input type="text" ngModel name="name" placeholder="nombre"> <br> 
+    <input type="text" ngModel name="lastName" placeholder="apellido"><br> 
+    <input type="text"  ngModel name="userName" placeholder="nombre de usuario"><br> 
+    <input type="text" ngModel name="email" placeholder="email"><br> 
+    <input type="password" ngModel name="password" placeholder="contraseña"><br> 
+    <button> crear cuenta</button>    
+   
+ 
+
+  </form>
+  </div> 
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
