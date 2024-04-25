@@ -1,28 +1,87 @@
 
 
-  <header>  
+  <header>
+     <div class="users">
+        {{usuarios}}
+     </div>  
+     <div class="form_edit"  *ngIf="mostrarDiv">
+
+      <form *ngIf="mostrarform1" [formGroup]="miFormulario" (ngSubmit)="onSubmit()  ">
+        <label>
+          texto:
+          <input type="text" class="form-control" style="margin-bottom: 5px; width: 150px;" formControlName="texto">
+        </label>
+        
+        <!-- otros campos... -->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+
+      <form *ngIf="mostrarform2" style="height:220px;"  [formGroup]="miFormulario" (ngSubmit)="onSubmit()">
+        <label>
+          Nombre:
+          <input formControlName="texto">
+        </label>
+      
+        <!-- Opciones con select -->
+        <label>
+          Elige una opción:
+          <select formControlName="opcion">
+            <option value="sincrono">sincrono</option>
+            <option value="asincrono">asincrono</option>
+            <option value="return">return </option>
+            <!-- Agrega más opciones según sea necesario -->
+          </select>
+        </label>
+      
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+
+    
+  
+
     <nav class="nav">
+       
+ 
+
       <ul>
         <li class="user">al</li>
          <li class="user">al</li>
          <li class="user">al</li>
          <li class="user">al</li>
-         <li class="share" style="background-color: gray;">compartir</li>
-         <li class="share" style="background-color:red;" (click)="guardar()">guardar</li>
+         <li class="share" *ngIf="botonVisible" style="background-color: gray;" (click)="compartir()"  >compartir</li>
+         <li class="share" *ngIf="botonVisible"  style="background-color:red;" (click)="guardar()">guardar</li>
         </ul>
-       
+         
+         <div  class="compartir"    *ngIf="mostrarlink">
+           
+            <input style="width: 290px;" class="linkc" type="text" ngModel [(ngModel)]="link"  name="grado" class="input"> 
+           
+         </div>
+
      <div class="perfiles">
 
      </div>
     </nav> 
+
+    
   
 </header>
-  
+    
    
 
   <main>
+       
+    
+    
     <aside>
-      <div class="contenedor">
+  
+  
+
+
+      <div class="contenedor" >
         <div 
         #movableDiv data-id="1" width="38" height="50"
         (mousedown)="onMouseDown($event)" 
@@ -124,6 +183,9 @@
    -->
   </div>
     </aside>
+
+
+    <button class="mostrar" (click)="toggleDiv()">></button>
     <article>
 
       <canvas #canvasElement id="actorCanvas" width="5000" height="3000" style="background-color:#121c27;" (document:mouseup)="onMouseUp($event)" (mousedown)="onCanvasMouseDown($event)"
@@ -141,6 +203,10 @@
     
     
     </article>
+
+    
+
+
   </main>
   <!-- <script type="module"  src="script.ts"></script>
   <script type="module" src="actor.ts"> </script>

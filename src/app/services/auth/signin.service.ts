@@ -4,6 +4,8 @@ import { LoginRequest } from './loginRequest';
 import { BehaviorSubject, Observable, catchError, tap, throwError } from 'rxjs';
 //import { User } from '../../Models/User.model';
 import {User} from '../../Models/user'
+import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +22,7 @@ export class SigninService {
 
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private route:ActivatedRoute,private router:Router) {
     const token=localStorage.getItem(this.tokenkey)
     if(token){
       this.token=token
@@ -57,16 +59,19 @@ export class SigninService {
   }
 
    Login(credentials:LoginRequest):Observable<User>{
-    const api = 'http://localhost:3001/api/auth/login';
+    //const api = 'http://localhost:3001/api/auth/login';
+    let api=environment.domain
+     api=api+'/auth/login'
     return this.http.post<User>(api, credentials).pipe(
       tap((userData: User) => {
-        //this.currerUserData.next(userData);
-        //this.currentUserLogionOn.next(true);
+
+        
         localStorage.setItem('token_key',userData.token)
         localStorage.setItem('userid',userData.id)
         localStorage.setItem('username',userData.name)
         localStorage.setItem('lastname',userData.lastName)
        // this.token = userData.token;
+       
         console.log(userData.name, 'prueba de token');
       }),
       catchError(this.handledError)
@@ -116,6 +121,11 @@ export class SigninService {
     return this.currentUserLogionOn.asObservable()
   }
  
+  
 
+  create(user:any):Observable<any> {
+    const api='/proyecto'
+    return this.http.post<any>(`${environment.domain}${api}`,user) 
+  }
  
 }

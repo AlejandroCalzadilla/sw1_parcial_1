@@ -19,7 +19,8 @@ export class SignupService {
   
    
   postData(data: any): Observable<any> {
-    const api='http://192.168.1.3:3000/api/auth/register'
+    //const api='http://192.168.1.3:3000/api/auth/register'
+     const api=environment.domain+'/auth/register'
     console.log(data)
     return this.http.post<any>(api, data);
   }
@@ -27,12 +28,14 @@ export class SignupService {
 
   getodos():Observable<any[]>{
      //console.log(environment,'prueba')
-     const api='http://localhost:3001/api/proyecto'
+     //const api='http://localhost:3001/api/proyecto'
+     const api=environment.domain+'/auth/proyecto'
     return this.http.get<any[]>(api); 
    } 
 
    createUser(user: any) {
-    const api='http://192.168.1.3:3001/api/auth/register'
+    //const api='http://192.168.1.3:3001/api/auth/register'
+    const api=environment.domain+'/auth/register'
     return this.http.post(api,user) 
   }
 

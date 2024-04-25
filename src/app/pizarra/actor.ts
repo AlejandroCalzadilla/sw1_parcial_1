@@ -10,6 +10,7 @@ export class Actor {
     conexion: any[];
     tipo: number;
     name:string='actor'
+    texto:string
     numero_c:number=24
 
     constructor(id:number) {
@@ -23,6 +24,7 @@ export class Actor {
         this.arrastrando = false;
         this.conexion = [];
         this.tipo = 1;
+        this.texto = `objet ${this.id}`;
     }
 
     drawActor(x: number, y: number): void {
@@ -69,7 +71,7 @@ export class Actor {
 
             ctx.font = "10px Arial";
             ctx.fillStyle = '#ffffff';
-            ctx.fillText("texto", x - 10, y + 65);
+            ctx.fillText(this.texto, x - 10, y + 65);
 
             ctx.beginPath();
             for (let i = 0; i < this.numero_c; i++) {

@@ -40,7 +40,7 @@ body {
      
      
      margin-left:10px;
-     margin-right: 10px;
+     margin-right:0px;
      margin-top:180px;
      /* background-color:white ; */
      background-color:#273e53; 
@@ -55,7 +55,7 @@ body {
 
     header{
       display: flex;
-      justify-content: end;
+      
        align-items: center;
        
     }
@@ -83,6 +83,7 @@ body {
    .nav{
     /* background-color:yellow; */
     border-radius: 5px;
+     margin-left:900px;
      width:35%;
      height:100%;
      display: flex;
@@ -136,7 +137,11 @@ body {
 
 
 
-
+    .users{
+     display: flex;
+      margin: 0;
+      color: red;
+    }
 
     .iconp{
       background-color:yellow;
@@ -144,4 +149,36 @@ body {
       width: 40px;
       height: 70px;
       
+    }
+
+    .mostrar{
+      margin-top: 250px;
+      
+      width:20px;
+      height:35px;
+    }
+
+
+    .form_edit{
+
+      margin-top:10px;
+      width: 200px;
+      height:120px;
+      background-color: red;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+
+
+    .compartir{
+      margin-top: 0px;
+      background-color: red;
+      width: 300px;
+      height: 40px;
+      padding-top: 10px;
+    }
+
+    .linkc{
+      width:100%;
     }

@@ -18,7 +18,7 @@ export const routes: Routes = [
          canActivate:[authGuard]
         },
     { path:'login', component:SigninComponent},
-    { path:'pizarra', component:PizarraComponent,canActivate:[authGuard]},
+    { path:':sala', component:PizarraComponent,canActivate:[authGuard]},
 
 
 ];

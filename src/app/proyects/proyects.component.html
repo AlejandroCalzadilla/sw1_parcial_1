@@ -19,7 +19,7 @@
   <section class="experiencia">
     <div class="co" >
       <div *ngFor="let proyect of proyectosFF" class="container_padre">      
-        <a class="link_tarjeta" (click)="proyecto(proyect.id)" routerLink="/pizarra"> 
+        <a class="link_tarjeta" (click)="proyecto(proyect.id)" (click)="proyecto2(proyect.userid)" routerLink="/sala{{proyect.id}}"> 
         <div   class="tarjeta">
           <div class="imagen">
             <img src="assets/secuenciap.png" alt="Microsoft 365">
@@ -38,7 +38,41 @@
     </div>
     
 
+       
+      <div class="containera">
+        <div style="color:white;">añadir Proyecto</div>
+        <form #userForm2="ngForm" (ngSubmit)="createp(userForm2.value)">   
+        <div class="row g-2">
+            <div class="col-6 column">
+                <label>nombre</label>
+                <br>
+                <input class="input" type="text" ngModel name="title" placeholder="name" class="input"> <br>
+                <label>descripcion</label>
+                <br> 
+                <input class="input" type="text" ngModel name="description" placeholder="descripcion" class="input"> <br>
+  
+            </div>
+            
+            
+        </div>
+    
+        <button class="btn btn-primary">añadir</button>
+    
+    </form> 
+      </div> 
 
+
+
+
+
+    <form  class="link"  (ngSubmit)="enviarDatos()">
+      <div>
+        <label for="nombre">SALA:</label>
+        <br>
+        <input class="input" type="text" id="nombre" [(ngModel)]="nombre"  name="nombre">
+      </div>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
 
     <div class="container">
       <br>
@@ -58,8 +92,8 @@
               <tr *ngFor="let proyect of proyectos; let i = index">
                   
                   <th >{{ i + 1 }}</th>
-                  <td (click)="proyecto(proyect.id)" routerLink="/pizarra"> {{ proyect.title }}  </td>
-                  <td (click)="proyecto(proyect.id)" routerLink="/pizarra" > {{ proyect.updated | date:'yyyy-MM-dd' }}</td>
+                  <td (click)="proyecto(proyect.id)" (click)="proyecto2(proyect.userid)" routerLink="/sala{{proyect.id}}"> {{ proyect.title }}  </td>
+                  <td (click)="proyecto(proyect.id)" (click)="proyecto2(proyect.userid)"  routerLink="/sala{{proyect.id}}" > {{ proyect.updated | date:'yyyy-MM-dd' }}</td>
                
                   <td style="width: 100px;">
                       <button type="button" class="btna btn-1">editar</button>

@@ -35,7 +35,9 @@ export class ProyectService{
       
       }
 
-
+      get userid():string|null{
+        return localStorage.getItem('userid')  
+     }
 
       logout(){
         this.signinservice.logout()

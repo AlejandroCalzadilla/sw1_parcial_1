@@ -49,7 +49,7 @@ export class LifeLine {
             ctx.beginPath();
             ctx.font = "15px Arial";
             ctx.fillStyle = this.texto_color;
-            ctx.fillText(this.texto, x + 40, y + 40);
+            ctx.fillText(this.texto, x + 10, y + 40);
             ctx.closePath();
 
 
